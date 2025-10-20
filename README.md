@@ -19,18 +19,5 @@ A C++ program that calculates the shortest path between buildings on the Florida
 
 ---
 
-## 📂 File Structure
-- `buildings.csv` – List of campus buildings and their coordinates  
-- `FGCU_Map.cpp` – Main program implementing Dijkstra's algorithm  
-- `README.md` – Project documentation  
-
----
-
-## ⚡ How to Run
-1. Clone the repository:  
-```bash
-git clone https://github.com/YourUsername/FGCU_Map.git
-
-
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/10260/badge)](https://www.bestpractices.dev/projects/10260) 
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/AsianTaquito/FGCU_map/badge)](https://scorecard.dev/viewer/?uri=github.com/AsianTaquito/FGCU_map)
