@@ -1,21 +1,76 @@
 # FGCU Map 🗺️
 
-A C++ program that calculates the shortest path between buildings on the Florida Gulf Coast University (FGCU) campus using **Dijkstra's algorithm**. The program reads building and pathway data from a CSV file and provides directions and distances between user-selected locations.
+An interactive walking-route map for the Florida Gulf Coast University (FGCU) campus. Pick any two buildings and it finds the **shortest** or **quickest** route using Dijkstra's algorithm, then draws it on a map with step-by-step directions.
+
+---
+
+## 📜 Origin
+
+This started as the original C++ program I wrote for my **Data Structures & Algorithms** class — a terminal app that read campus data from a CSV and ran Dijkstra's algorithm to find a path between two buildings. That code is still in this repo, unchanged, in [`FGCU_Map/main.cpp`](FGCU_Map/main.cpp) and [`FGCU_Map/Graph.h`](FGCU_Map/Graph.h).
+
+I've decided to build on top of it, starting with this web app. The routing logic has been ported to JavaScript so it can run in the browser, and the campus data now lives in JSON instead of being parsed from CSV at runtime.
+
+> **Note:** the port fixes two bugs found in the original C++ while converting it:
+> 1. The priority queue was declared `pair<string, double>`, so `greater<>` ordered entries by **building name** rather than by weight — breaking Dijkstra's core invariant and returning suboptimal routes.
+> 2. `addEdge` aggregate-initialized the `edge` struct with `pathway` and `direction` swapped.
 
 ---
 
 ## 🚀 Features
-- Reads campus building and pathway data from CSV files  
-- Calculates the shortest route between two buildings using Dijkstra's algorithm  
-- Displays step-by-step directions and total distance  
-- Handles arbitrary start and end locations from the dataset  
+- Click any two buildings on the map, or pick them from the dropdowns
+- Toggle between **shortest** (fewest feet) and **quickest** (least walking time, accounting for each pathway's speed)
+- Turn-by-turn directions with compass headings, distances, and per-leg times
+- Hover a step to highlight that leg on the map
+- Pan and zoom
+- Shareable route links — `#from=Alico_Arena&to=Seidler_Hall&by=quickest`
+
+---
+
+## 🗂️ Layout
+
+```
+FGCU_Map/        campus data + routing logic (shared core)
+  fgcu.csv         original source data, still the thing you edit
+  campus.json      generated map database: 42 buildings, 160 edges
+  build-data.js    regenerates campus.json from fgcu.csv
+  graph.js         Dijkstra implementation (JS port of Graph.h / main.cpp)
+  main.cpp         original C++ program (class project, superseded)
+  Graph.h
+web/             the web app
+  index.html
+  styles.css
+  app.js           map rendering + interaction
+```
+
+### Where the map coordinates come from
+
+The CSV never contained building positions — only a compass `direction` and a `distance` for each pathway. `FGCU_Map/build-data.js` treats those as constraints and solves for a set of coordinates that best satisfies all 160 of them at once (least-squares relaxation). The result stays geographically honest: the median edge is within **16 ft** of its stated distance, and every edge still points within its labeled compass octant.
+
+To regenerate after editing `fgcu.csv`:
+
+```sh
+node FGCU_Map/build-data.js
+```
+
+---
+
+## 🧑‍💻 Running it locally
+
+The page loads its data with `fetch`, so it needs a real server — opening `index.html` from the filesystem won't work. From the repo root:
+
+```sh
+npx http-server -c-1
+```
+
+Then open `http://localhost:8080/web/`.
 
 ---
 
 ## 🧰 Tech Stack
-- **Language:** C++  
-- **Algorithms:** Dijkstra's shortest path algorithm  
-- **Data Handling:** CSV file parsing  
+- **Web app:** plain HTML, CSS, and JavaScript — no framework, no build step, no dependencies
+- **Algorithms:** Dijkstra's shortest path; least-squares layout solving for map coordinates
+- **Hosting:** GitHub Pages, deployed by GitHub Actions on every push to `main`
+- **Original:** C++ (`FGCU_Map/`)
 
 ---
 
