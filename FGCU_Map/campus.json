@@ -1,0 +1,1543 @@
+{
+  "source": "FGCU_Map/fgcu.csv",
+  "view": {
+    "width": 1000,
+    "height": 932.8
+  },
+  "buildings": [
+    {
+      "id": "Alico_Arena",
+      "label": "Alico Arena",
+      "x": 940,
+      "y": 100.3
+    },
+    {
+      "id": "Aquatics_Center",
+      "label": "Aquatics Center",
+      "x": 915,
+      "y": 245.2
+    },
+    {
+      "id": "Arts_Complex",
+      "label": "Arts Complex",
+      "x": 586.9,
+      "y": 612.5
+    },
+    {
+      "id": "Biscayne_Hall",
+      "label": "Biscayne Hall",
+      "x": 685.1,
+      "y": 872.8
+    },
+    {
+      "id": "Campus_Support",
+      "label": "Campus Support",
+      "x": 291.1,
+      "y": 603.1
+    },
+    {
+      "id": "Career_Services",
+      "label": "Career Services",
+      "x": 574.2,
+      "y": 360.9
+    },
+    {
+      "id": "Counseling",
+      "label": "Counseling",
+      "x": 397.8,
+      "y": 475.1
+    },
+    {
+      "id": "Eagle_Hall",
+      "label": "Eagle Hall",
+      "x": 797.9,
+      "y": 776.9
+    },
+    {
+      "id": "Edward_Hall",
+      "label": "Edward Hall",
+      "x": 383.9,
+      "y": 394.7
+    },
+    {
+      "id": "Entrepreneurship",
+      "label": "Entrepreneurship",
+      "x": 335.2,
+      "y": 499.8
+    },
+    {
+      "id": "Everglades_Hall",
+      "label": "Everglades Hall",
+      "x": 731.1,
+      "y": 849.9
+    },
+    {
+      "id": "Family_Resource_Center",
+      "label": "Family Resource Center",
+      "x": 278.7,
+      "y": 516.7
+    },
+    {
+      "id": "Griffen_Hall",
+      "label": "Griffen Hall",
+      "x": 507.5,
+      "y": 383.8
+    },
+    {
+      "id": "Holmes_Hall",
+      "label": "Holmes Hall",
+      "x": 339.4,
+      "y": 437.9
+    },
+    {
+      "id": "Hospitality",
+      "label": "Hospitality",
+      "x": 661.7,
+      "y": 297.8
+    },
+    {
+      "id": "Howard_Hall",
+      "label": "Howard Hall",
+      "x": 539,
+      "y": 357.1
+    },
+    {
+      "id": "Intramural_Field",
+      "label": "Intramural Field",
+      "x": 759.6,
+      "y": 435.1
+    },
+    {
+      "id": "Kleist_Health_Ed.",
+      "label": "Kleist Health Ed.",
+      "x": 60,
+      "y": 562.2
+    },
+    {
+      "id": "Library",
+      "label": "Library",
+      "x": 557.8,
+      "y": 479.7
+    },
+    {
+      "id": "Lutgert_Hall",
+      "label": "Lutgert Hall",
+      "x": 283.4,
+      "y": 413.5
+    },
+    {
+      "id": "Marieb_Hall",
+      "label": "Marieb Hall",
+      "x": 337.2,
+      "y": 383.7
+    },
+    {
+      "id": "McTarnaghan_Hall",
+      "label": "McTarnaghan Hall",
+      "x": 541.2,
+      "y": 331.6
+    },
+    {
+      "id": "Merwin_Hall",
+      "label": "Merwin Hall",
+      "x": 443.8,
+      "y": 388.1
+    },
+    {
+      "id": "North_Lake_Village",
+      "label": "North Lake Village",
+      "x": 664.5,
+      "y": 60
+    },
+    {
+      "id": "Osprey_Hall",
+      "label": "Osprey Hall",
+      "x": 806.4,
+      "y": 817.7
+    },
+    {
+      "id": "Palmetto_Hall",
+      "label": "Palmetto Hall",
+      "x": 674.8,
+      "y": 797
+    },
+    {
+      "id": "Parking_Garage_1",
+      "label": "Parking Garage 1",
+      "x": 770.9,
+      "y": 310.2
+    },
+    {
+      "id": "Parking_Garage_2",
+      "label": "Parking Garage 2",
+      "x": 454.9,
+      "y": 642.6
+    },
+    {
+      "id": "Parking_Garage_3",
+      "label": "Parking Garage 3",
+      "x": 456.5,
+      "y": 248.6
+    },
+    {
+      "id": "Parking_Garage_4",
+      "label": "Parking Garage 4",
+      "x": 298.5,
+      "y": 338.3
+    },
+    {
+      "id": "Parking_Garage_B",
+      "label": "Parking Garage B",
+      "x": 856.9,
+      "y": 868.8
+    },
+    {
+      "id": "Recreation_Center",
+      "label": "Recreation Center",
+      "x": 553.7,
+      "y": 872.8
+    },
+    {
+      "id": "Recreation_Field_#2",
+      "label": "Recreation Field #2",
+      "x": 867.5,
+      "y": 826.6
+    },
+    {
+      "id": "Reed_Hall",
+      "label": "Reed Hall",
+      "x": 506.8,
+      "y": 421.9
+    },
+    {
+      "id": "Seidler_Hall",
+      "label": "Seidler Hall",
+      "x": 390,
+      "y": 431.3
+    },
+    {
+      "id": "SoVi_Dinning",
+      "label": "SoVi Dinning",
+      "x": 756.3,
+      "y": 810.9
+    },
+    {
+      "id": "Student_Union",
+      "label": "Student Union",
+      "x": 551.3,
+      "y": 285.4
+    },
+    {
+      "id": "Veterans_Pavilion",
+      "label": "Veterans Pavilion",
+      "x": 592.1,
+      "y": 432.5
+    },
+    {
+      "id": "WGCU",
+      "label": "WGCU",
+      "x": 373.7,
+      "y": 324.2
+    },
+    {
+      "id": "Water_School",
+      "label": "Water School",
+      "x": 681.2,
+      "y": 360.3
+    },
+    {
+      "id": "Welcome_Center",
+      "label": "Welcome Center",
+      "x": 60,
+      "y": 413.5
+    },
+    {
+      "id": "Whitaker_Hall",
+      "label": "Whitaker Hall",
+      "x": 444.4,
+      "y": 412.4
+    }
+  ],
+  "edges": [
+    {
+      "from": "Alico_Arena",
+      "to": "Aquatics_Center",
+      "pathway": "Alico_Arena_to_Aquatics_Center",
+      "direction": "South",
+      "distance": 175,
+      "speed": 1.3
+    },
+    {
+      "from": "Aquatics_Center",
+      "to": "Alico_Arena",
+      "pathway": "Alico_Arena_to_Aquatics_Center",
+      "direction": "North",
+      "distance": 175,
+      "speed": 1.3
+    },
+    {
+      "from": "Aquatics_Center",
+      "to": "North_Lake_Village",
+      "pathway": "Aquatics_Center_to_North_Lake_Village",
+      "direction": "Northwest",
+      "distance": 534,
+      "speed": 1.3
+    },
+    {
+      "from": "North_Lake_Village",
+      "to": "Aquatics_Center",
+      "pathway": "Aquatics_Center_to_North_Lake_Village",
+      "direction": "Southeast",
+      "distance": 534,
+      "speed": 1.3
+    },
+    {
+      "from": "Arts_Complex",
+      "to": "Intramural_Field",
+      "pathway": "Arts_Complex_to_Intramural_Field",
+      "direction": "Northeast",
+      "distance": 397,
+      "speed": 1.4
+    },
+    {
+      "from": "Intramural_Field",
+      "to": "Arts_Complex",
+      "pathway": "Arts_Complex_to_Intramural_Field",
+      "direction": "Southwest",
+      "distance": 397,
+      "speed": 1.4
+    },
+    {
+      "from": "Arts_Complex",
+      "to": "Library",
+      "pathway": "Arts_Complex_to_Library",
+      "direction": "North",
+      "distance": 188,
+      "speed": 1.3
+    },
+    {
+      "from": "Library",
+      "to": "Arts_Complex",
+      "pathway": "Arts_Complex_to_Library",
+      "direction": "South",
+      "distance": 188,
+      "speed": 1.3
+    },
+    {
+      "from": "Biscayne_Hall",
+      "to": "Parking_Garage_2",
+      "pathway": "Biscayne_Hall_to_Parking_Garage_2",
+      "direction": "Northwest",
+      "distance": 545,
+      "speed": 1.4
+    },
+    {
+      "from": "Parking_Garage_2",
+      "to": "Biscayne_Hall",
+      "pathway": "Biscayne_Hall_to_Parking_Garage_2",
+      "direction": "Southeast",
+      "distance": 545,
+      "speed": 1.4
+    },
+    {
+      "from": "Biscayne_Hall",
+      "to": "Parking_Garage_B",
+      "pathway": "Biscayne_Hall_to_Parking_Garage_B",
+      "direction": "East",
+      "distance": 280,
+      "speed": 1.4
+    },
+    {
+      "from": "Parking_Garage_B",
+      "to": "Biscayne_Hall",
+      "pathway": "Biscayne_Hall_to_Parking_Garage_B",
+      "direction": "West",
+      "distance": 280,
+      "speed": 1.4
+    },
+    {
+      "from": "Campus_Support",
+      "to": "Parking_Garage_2",
+      "pathway": "Campus_Support_to_Parking_Garage_2",
+      "direction": "East",
+      "distance": 332,
+      "speed": 1.4
+    },
+    {
+      "from": "Parking_Garage_2",
+      "to": "Campus_Support",
+      "pathway": "Campus_Support_to_Parking_Garage_2",
+      "direction": "West",
+      "distance": 332,
+      "speed": 1.4
+    },
+    {
+      "from": "Career_Services",
+      "to": "Howard_Hall",
+      "pathway": "Career_Services_to_Howard_Hall",
+      "direction": "West",
+      "distance": 56,
+      "speed": 0.9
+    },
+    {
+      "from": "Howard_Hall",
+      "to": "Career_Services",
+      "pathway": "Career_Services_to_Howard_Hall",
+      "direction": "East",
+      "distance": 56,
+      "speed": 0.9
+    },
+    {
+      "from": "Career_Services",
+      "to": "Veterans_Pavilion",
+      "pathway": "Career_Services_to_Veterans_Pavilion",
+      "direction": "South",
+      "distance": 100,
+      "speed": 1.3
+    },
+    {
+      "from": "Veterans_Pavilion",
+      "to": "Career_Services",
+      "pathway": "Career_Services_to_Veterans_Pavilion",
+      "direction": "North",
+      "distance": 100,
+      "speed": 1.3
+    },
+    {
+      "from": "Career_Services",
+      "to": "Water_School",
+      "pathway": "Career_Services_to_Water_School",
+      "direction": "East",
+      "distance": 188,
+      "speed": 1.3
+    },
+    {
+      "from": "Water_School",
+      "to": "Career_Services",
+      "pathway": "Career_Services_to_Water_School",
+      "direction": "West",
+      "distance": 188,
+      "speed": 1.3
+    },
+    {
+      "from": "Counseling",
+      "to": "Whitaker_Hall",
+      "pathway": "Counseling_to_Whitaker_Hall",
+      "direction": "Northeast",
+      "distance": 89,
+      "speed": 1.3
+    },
+    {
+      "from": "Whitaker_Hall",
+      "to": "Counseling",
+      "pathway": "Counseling_to_Whitaker_Hall",
+      "direction": "Southwest",
+      "distance": 89,
+      "speed": 1.3
+    },
+    {
+      "from": "Eagle_Hall",
+      "to": "Osprey_Hall",
+      "pathway": "Eagle_Hall_to_Osprey_Hall",
+      "direction": "South",
+      "distance": 66,
+      "speed": 0.9
+    },
+    {
+      "from": "Osprey_Hall",
+      "to": "Eagle_Hall",
+      "pathway": "Eagle_Hall_to_Osprey_Hall",
+      "direction": "North",
+      "distance": 66,
+      "speed": 0.9
+    },
+    {
+      "from": "Eagle_Hall",
+      "to": "Recreation_Field_#2",
+      "pathway": "Eagle_Hall_to_Recreation_Field_#2",
+      "direction": "Southeast",
+      "distance": 172,
+      "speed": 1.3
+    },
+    {
+      "from": "Recreation_Field_#2",
+      "to": "Eagle_Hall",
+      "pathway": "Eagle_Hall_to_Recreation_Field_#2",
+      "direction": "Northwest",
+      "distance": 172,
+      "speed": 1.3
+    },
+    {
+      "from": "Entrepreneurship",
+      "to": "Counseling",
+      "pathway": "Entrepreneurship_to_Counseling",
+      "direction": "East",
+      "distance": 103,
+      "speed": 1.3
+    },
+    {
+      "from": "Counseling",
+      "to": "Entrepreneurship",
+      "pathway": "Entrepreneurship_to_Counseling",
+      "direction": "West",
+      "distance": 103,
+      "speed": 1.3
+    },
+    {
+      "from": "Entrepreneurship",
+      "to": "Family_Resource_Center",
+      "pathway": "Entrepreneurship_to_Family_Resource_Center",
+      "direction": "West",
+      "distance": 47,
+      "speed": 1.3
+    },
+    {
+      "from": "Family_Resource_Center",
+      "to": "Entrepreneurship",
+      "pathway": "Entrepreneurship_to_Family_Resource_Center",
+      "direction": "East",
+      "distance": 47,
+      "speed": 1.3
+    },
+    {
+      "from": "Everglades_Hall",
+      "to": "Biscayne_Hall",
+      "pathway": "Everglades_Hall_to_Biscayne_Hall",
+      "direction": "Southwest",
+      "distance": 95,
+      "speed": 0.9
+    },
+    {
+      "from": "Biscayne_Hall",
+      "to": "Everglades_Hall",
+      "pathway": "Everglades_Hall_to_Biscayne_Hall",
+      "direction": "Northeast",
+      "distance": 95,
+      "speed": 0.9
+    },
+    {
+      "from": "Everglades_Hall",
+      "to": "Parking_Garage_B",
+      "pathway": "Everglades_Hall_to_Parking_Garage_B",
+      "direction": "East",
+      "distance": 198,
+      "speed": 1.3
+    },
+    {
+      "from": "Parking_Garage_B",
+      "to": "Everglades_Hall",
+      "pathway": "Everglades_Hall_to_Parking_Garage_B",
+      "direction": "West",
+      "distance": 198,
+      "speed": 1.3
+    },
+    {
+      "from": "Everglades_Hall",
+      "to": "SoVi_Dinning",
+      "pathway": "Everglades_Hall_to_SoVi_Dinning",
+      "direction": "Northeast",
+      "distance": 72,
+      "speed": 0.9
+    },
+    {
+      "from": "SoVi_Dinning",
+      "to": "Everglades_Hall",
+      "pathway": "Everglades_Hall_to_SoVi_Dinning",
+      "direction": "Southwest",
+      "distance": 72,
+      "speed": 0.9
+    },
+    {
+      "from": "Family_Resource_Center",
+      "to": "Campus_Support",
+      "pathway": "Family_Resource_Center_to_Campus_Support",
+      "direction": "Southeast",
+      "distance": 111,
+      "speed": 1.4
+    },
+    {
+      "from": "Campus_Support",
+      "to": "Family_Resource_Center",
+      "pathway": "Family_Resource_Center_to_Campus_Support",
+      "direction": "Northwest",
+      "distance": 111,
+      "speed": 1.4
+    },
+    {
+      "from": "Griffen_Hall",
+      "to": "Howard_Hall",
+      "pathway": "Griffen_Hall_to_Howard_Hall",
+      "direction": "Northeast",
+      "distance": 74,
+      "speed": 1.3
+    },
+    {
+      "from": "Howard_Hall",
+      "to": "Griffen_Hall",
+      "pathway": "Griffen_Hall_to_Howard_Hall",
+      "direction": "Southwest",
+      "distance": 74,
+      "speed": 1.3
+    },
+    {
+      "from": "Griffen_Hall",
+      "to": "Merwin_Hall",
+      "pathway": "Griffen_Hall_to_Merwin_Hall",
+      "direction": "West",
+      "distance": 91,
+      "speed": 1.3
+    },
+    {
+      "from": "Merwin_Hall",
+      "to": "Griffen_Hall",
+      "pathway": "Griffen_Hall_to_Merwin_Hall",
+      "direction": "East",
+      "distance": 91,
+      "speed": 1.3
+    },
+    {
+      "from": "Griffen_Hall",
+      "to": "Water_School",
+      "pathway": "Griffen_Hall_to_Water_School",
+      "direction": "East",
+      "distance": 189,
+      "speed": 1.3
+    },
+    {
+      "from": "Water_School",
+      "to": "Griffen_Hall",
+      "pathway": "Griffen_Hall_to_Water_School",
+      "direction": "West",
+      "distance": 189,
+      "speed": 1.3
+    },
+    {
+      "from": "Holmes_Hall",
+      "to": "Edward_Hall",
+      "pathway": "Holmes_Hall_to_Edward_Hall",
+      "direction": "Northeast",
+      "distance": 95,
+      "speed": 0.9
+    },
+    {
+      "from": "Edward_Hall",
+      "to": "Holmes_Hall",
+      "pathway": "Holmes_Hall_to_Edward_Hall",
+      "direction": "Southwest",
+      "distance": 95,
+      "speed": 0.9
+    },
+    {
+      "from": "Holmes_Hall",
+      "to": "Entrepreneurship",
+      "pathway": "Holmes_Hall_to_Entrepreneurship",
+      "direction": "South",
+      "distance": 136,
+      "speed": 1.3
+    },
+    {
+      "from": "Entrepreneurship",
+      "to": "Holmes_Hall",
+      "pathway": "Holmes_Hall_to_Entrepreneurship",
+      "direction": "North",
+      "distance": 136,
+      "speed": 1.3
+    },
+    {
+      "from": "Holmes_Hall",
+      "to": "Family_Resource_Center",
+      "pathway": "Holmes_Hall_to_Family_Resource_Center",
+      "direction": "Southwest",
+      "distance": 140,
+      "speed": 1.3
+    },
+    {
+      "from": "Family_Resource_Center",
+      "to": "Holmes_Hall",
+      "pathway": "Holmes_Hall_to_Family_Resource_Center",
+      "direction": "Northeast",
+      "distance": 140,
+      "speed": 1.3
+    },
+    {
+      "from": "Holmes_Hall",
+      "to": "Lutgert_Hall",
+      "pathway": "Holmes_Hall_to_Lutgert_Hall",
+      "direction": "Northwest",
+      "distance": 110,
+      "speed": 1.3
+    },
+    {
+      "from": "Lutgert_Hall",
+      "to": "Holmes_Hall",
+      "pathway": "Holmes_Hall_to_Lutgert_Hall",
+      "direction": "Southeast",
+      "distance": 110,
+      "speed": 1.3
+    },
+    {
+      "from": "Holmes_Hall",
+      "to": "Marieb_Hall",
+      "pathway": "Holmes_Hall_to_Marieb_Hall",
+      "direction": "North",
+      "distance": 70,
+      "speed": 0.9
+    },
+    {
+      "from": "Marieb_Hall",
+      "to": "Holmes_Hall",
+      "pathway": "Holmes_Hall_to_Marieb_Hall",
+      "direction": "South",
+      "distance": 70,
+      "speed": 0.9
+    },
+    {
+      "from": "Holmes_Hall",
+      "to": "Seidler_Hall",
+      "pathway": "Holmes_Hall_to_Seidler_Hall",
+      "direction": "East",
+      "distance": 63,
+      "speed": 1.3
+    },
+    {
+      "from": "Seidler_Hall",
+      "to": "Holmes_Hall",
+      "pathway": "Holmes_Hall_to_Seidler_Hall",
+      "direction": "West",
+      "distance": 63,
+      "speed": 1.3
+    },
+    {
+      "from": "Hospitality",
+      "to": "Parking_Garage_1",
+      "pathway": "Hospitality_to_Parking_Garage_1",
+      "direction": "East",
+      "distance": 89,
+      "speed": 1.3
+    },
+    {
+      "from": "Parking_Garage_1",
+      "to": "Hospitality",
+      "pathway": "Hospitality_to_Parking_Garage_1",
+      "direction": "West",
+      "distance": 89,
+      "speed": 1.3
+    },
+    {
+      "from": "Howard_Hall",
+      "to": "McTarnaghan_Hall",
+      "pathway": "Howard_Hall_to_McTarnaghan_Hall",
+      "direction": "Northeast",
+      "distance": 53,
+      "speed": 0.9
+    },
+    {
+      "from": "McTarnaghan_Hall",
+      "to": "Howard_Hall",
+      "pathway": "Howard_Hall_to_McTarnaghan_Hall",
+      "direction": "Southwest",
+      "distance": 53,
+      "speed": 0.9
+    },
+    {
+      "from": "Intramural_Field",
+      "to": "Parking_Garage_1",
+      "pathway": "Intramural_Field_to_Parking_Garage_1",
+      "direction": "North",
+      "distance": 197,
+      "speed": 1.4
+    },
+    {
+      "from": "Parking_Garage_1",
+      "to": "Intramural_Field",
+      "pathway": "Intramural_Field_to_Parking_Garage_1",
+      "direction": "South",
+      "distance": 197,
+      "speed": 1.4
+    },
+    {
+      "from": "Intramural_Field",
+      "to": "Water_School",
+      "pathway": "Intramural_Field_to_Water_School",
+      "direction": "Northwest",
+      "distance": 171,
+      "speed": 1.3
+    },
+    {
+      "from": "Water_School",
+      "to": "Intramural_Field",
+      "pathway": "Intramural_Field_to_Water_School",
+      "direction": "Southeast",
+      "distance": 171,
+      "speed": 1.3
+    },
+    {
+      "from": "Library",
+      "to": "Howard_Hall",
+      "pathway": "Library_to_Howard_Hall",
+      "direction": "North",
+      "distance": 199,
+      "speed": 1.3
+    },
+    {
+      "from": "Howard_Hall",
+      "to": "Library",
+      "pathway": "Library_to_Howard_Hall",
+      "direction": "South",
+      "distance": 199,
+      "speed": 1.3
+    },
+    {
+      "from": "Library",
+      "to": "Reed_Hall",
+      "pathway": "Library_to_Reed_Hall",
+      "direction": "Northwest",
+      "distance": 112,
+      "speed": 1.3
+    },
+    {
+      "from": "Reed_Hall",
+      "to": "Library",
+      "pathway": "Library_to_Reed_Hall",
+      "direction": "Southeast",
+      "distance": 112,
+      "speed": 1.3
+    },
+    {
+      "from": "Lutgert_Hall",
+      "to": "Entrepreneurship",
+      "pathway": "Lutgert_Hall_to_Entrepreneurship",
+      "direction": "Southeast",
+      "distance": 193,
+      "speed": 1.3
+    },
+    {
+      "from": "Entrepreneurship",
+      "to": "Lutgert_Hall",
+      "pathway": "Lutgert_Hall_to_Entrepreneurship",
+      "direction": "Northwest",
+      "distance": 193,
+      "speed": 1.3
+    },
+    {
+      "from": "Lutgert_Hall",
+      "to": "Family_Resource_Center",
+      "pathway": "Lutgert_Hall_to_Family_Resource_Center",
+      "direction": "South",
+      "distance": 168,
+      "speed": 1.3
+    },
+    {
+      "from": "Family_Resource_Center",
+      "to": "Lutgert_Hall",
+      "pathway": "Lutgert_Hall_to_Family_Resource_Center",
+      "direction": "North",
+      "distance": 168,
+      "speed": 1.3
+    },
+    {
+      "from": "Lutgert_Hall",
+      "to": "Welcome_Center",
+      "pathway": "Lutgert_Hall_to_Welcome_Center",
+      "direction": "West",
+      "distance": 374,
+      "speed": 1.4
+    },
+    {
+      "from": "Welcome_Center",
+      "to": "Lutgert_Hall",
+      "pathway": "Lutgert_Hall_to_Welcome_Center",
+      "direction": "East",
+      "distance": 374,
+      "speed": 1.4
+    },
+    {
+      "from": "Marieb_Hall",
+      "to": "Edward_Hall",
+      "pathway": "Marieb_Hall_to_Edward_Hall",
+      "direction": "East",
+      "distance": 70,
+      "speed": 1.3
+    },
+    {
+      "from": "Edward_Hall",
+      "to": "Marieb_Hall",
+      "pathway": "Marieb_Hall_to_Edward_Hall",
+      "direction": "West",
+      "distance": 70,
+      "speed": 1.3
+    },
+    {
+      "from": "Marieb_Hall",
+      "to": "Lutgert_Hall",
+      "pathway": "Marieb_Hall_to_Lutgert_Hall",
+      "direction": "Southwest",
+      "distance": 104,
+      "speed": 1.3
+    },
+    {
+      "from": "Lutgert_Hall",
+      "to": "Marieb_Hall",
+      "pathway": "Marieb_Hall_to_Lutgert_Hall",
+      "direction": "Northeast",
+      "distance": 104,
+      "speed": 1.3
+    },
+    {
+      "from": "Marieb_Hall",
+      "to": "Parking_Garage_4",
+      "pathway": "Marieb_Hall_to_Parking_Garage_4",
+      "direction": "Northwest",
+      "distance": 74,
+      "speed": 1.3
+    },
+    {
+      "from": "Parking_Garage_4",
+      "to": "Marieb_Hall",
+      "pathway": "Marieb_Hall_to_Parking_Garage_4",
+      "direction": "Southeast",
+      "distance": 74,
+      "speed": 1.3
+    },
+    {
+      "from": "McTarnaghan_Hall",
+      "to": "Career_Services",
+      "pathway": "McTarnaghan_Hall_to_Career_Services",
+      "direction": "Southeast",
+      "distance": 52,
+      "speed": 0.9
+    },
+    {
+      "from": "Career_Services",
+      "to": "McTarnaghan_Hall",
+      "pathway": "McTarnaghan_Hall_to_Career_Services",
+      "direction": "Northwest",
+      "distance": 52,
+      "speed": 0.9
+    },
+    {
+      "from": "McTarnaghan_Hall",
+      "to": "Student_Union",
+      "pathway": "McTarnaghan_Hall_to_Student_Union",
+      "direction": "Northeast",
+      "distance": 89,
+      "speed": 1.3
+    },
+    {
+      "from": "Student_Union",
+      "to": "McTarnaghan_Hall",
+      "pathway": "McTarnaghan_Hall_to_Student_Union",
+      "direction": "Southwest",
+      "distance": 89,
+      "speed": 1.3
+    },
+    {
+      "from": "Merwin_Hall",
+      "to": "Edward_Hall",
+      "pathway": "Merwin_Hall_to_Edward_Hall",
+      "direction": "West",
+      "distance": 78,
+      "speed": 1.3
+    },
+    {
+      "from": "Edward_Hall",
+      "to": "Merwin_Hall",
+      "pathway": "Merwin_Hall_to_Edward_Hall",
+      "direction": "East",
+      "distance": 78,
+      "speed": 1.3
+    },
+    {
+      "from": "Merwin_Hall",
+      "to": "Parking_Garage_3",
+      "pathway": "Merwin_Hall_to_Parking_Garage_3",
+      "direction": "North",
+      "distance": 259,
+      "speed": 1.3
+    },
+    {
+      "from": "Parking_Garage_3",
+      "to": "Merwin_Hall",
+      "pathway": "Merwin_Hall_to_Parking_Garage_3",
+      "direction": "South",
+      "distance": 259,
+      "speed": 1.3
+    },
+    {
+      "from": "Merwin_Hall",
+      "to": "Seidler_Hall",
+      "pathway": "Merwin_Hall_to_Seidler_Hall",
+      "direction": "Southwest",
+      "distance": 105,
+      "speed": 0.9
+    },
+    {
+      "from": "Seidler_Hall",
+      "to": "Merwin_Hall",
+      "pathway": "Merwin_Hall_to_Seidler_Hall",
+      "direction": "Northeast",
+      "distance": 105,
+      "speed": 0.9
+    },
+    {
+      "from": "North_Lake_Village",
+      "to": "Alico_Arena",
+      "pathway": "North_Lake_Village_to_Alico_Arena",
+      "direction": "East",
+      "distance": 503,
+      "speed": 1.3
+    },
+    {
+      "from": "Alico_Arena",
+      "to": "North_Lake_Village",
+      "pathway": "North_Lake_Village_to_Alico_Arena",
+      "direction": "West",
+      "distance": 503,
+      "speed": 1.3
+    },
+    {
+      "from": "Osprey_Hall",
+      "to": "Parking_Garage_B",
+      "pathway": "Osprey_Hall_to_Parking_Garage_B",
+      "direction": "Southeast",
+      "distance": 123,
+      "speed": 0.9
+    },
+    {
+      "from": "Parking_Garage_B",
+      "to": "Osprey_Hall",
+      "pathway": "Osprey_Hall_to_Parking_Garage_B",
+      "direction": "Northwest",
+      "distance": 123,
+      "speed": 0.9
+    },
+    {
+      "from": "Osprey_Hall",
+      "to": "Recreation_Field_#2",
+      "pathway": "Osprey_Hall_to_Recreation_Field_#2",
+      "direction": "East",
+      "distance": 115,
+      "speed": 0.9
+    },
+    {
+      "from": "Recreation_Field_#2",
+      "to": "Osprey_Hall",
+      "pathway": "Osprey_Hall_to_Recreation_Field_#2",
+      "direction": "West",
+      "distance": 115,
+      "speed": 0.9
+    },
+    {
+      "from": "Palmetto_Hall",
+      "to": "Biscayne_Hall",
+      "pathway": "Palmetto_Hall_to_Biscayne_Hall",
+      "direction": "South",
+      "distance": 105,
+      "speed": 1.3
+    },
+    {
+      "from": "Biscayne_Hall",
+      "to": "Palmetto_Hall",
+      "pathway": "Palmetto_Hall_to_Biscayne_Hall",
+      "direction": "North",
+      "distance": 105,
+      "speed": 1.3
+    },
+    {
+      "from": "Palmetto_Hall",
+      "to": "Eagle_Hall",
+      "pathway": "Palmetto_Hall_to_Eagle_Hall",
+      "direction": "East",
+      "distance": 212,
+      "speed": 1.4
+    },
+    {
+      "from": "Eagle_Hall",
+      "to": "Palmetto_Hall",
+      "pathway": "Palmetto_Hall_to_Eagle_Hall",
+      "direction": "West",
+      "distance": 212,
+      "speed": 1.4
+    },
+    {
+      "from": "Palmetto_Hall",
+      "to": "Everglades_Hall",
+      "pathway": "Palmetto_Hall_to_Everglades_Hall",
+      "direction": "Southeast",
+      "distance": 142,
+      "speed": 0.9
+    },
+    {
+      "from": "Everglades_Hall",
+      "to": "Palmetto_Hall",
+      "pathway": "Palmetto_Hall_to_Everglades_Hall",
+      "direction": "Northwest",
+      "distance": 142,
+      "speed": 0.9
+    },
+    {
+      "from": "Palmetto_Hall",
+      "to": "SoVi_Dinning",
+      "pathway": "Palmetto_Hall_to_SoVi_Dinning",
+      "direction": "East",
+      "distance": 142,
+      "speed": 1.3
+    },
+    {
+      "from": "SoVi_Dinning",
+      "to": "Palmetto_Hall",
+      "pathway": "Palmetto_Hall_to_SoVi_Dinning",
+      "direction": "West",
+      "distance": 142,
+      "speed": 1.3
+    },
+    {
+      "from": "Parking_Garage_1",
+      "to": "North_Lake_Village",
+      "pathway": "Parking_Garage_1_to_North_Lake_Village",
+      "direction": "Northwest",
+      "distance": 555,
+      "speed": 1.3
+    },
+    {
+      "from": "North_Lake_Village",
+      "to": "Parking_Garage_1",
+      "pathway": "Parking_Garage_1_to_North_Lake_Village",
+      "direction": "Southeast",
+      "distance": 555,
+      "speed": 1.3
+    },
+    {
+      "from": "Parking_Garage_1",
+      "to": "Water_School",
+      "pathway": "Parking_Garage_1_to_Water_School",
+      "direction": "Southwest",
+      "distance": 69,
+      "speed": 1.3
+    },
+    {
+      "from": "Water_School",
+      "to": "Parking_Garage_1",
+      "pathway": "Parking_Garage_1_to_Water_School",
+      "direction": "Northeast",
+      "distance": 69,
+      "speed": 1.3
+    },
+    {
+      "from": "Parking_Garage_2",
+      "to": "Arts_Complex",
+      "pathway": "Parking_Garage_2_to_Arts_Complex",
+      "direction": "East",
+      "distance": 261,
+      "speed": 1.4
+    },
+    {
+      "from": "Arts_Complex",
+      "to": "Parking_Garage_2",
+      "pathway": "Parking_Garage_2_to_Arts_Complex",
+      "direction": "West",
+      "distance": 261,
+      "speed": 1.4
+    },
+    {
+      "from": "Parking_Garage_3",
+      "to": "Griffen_Hall",
+      "pathway": "Parking_Garage_3_to_Griffen_Hall",
+      "direction": "South",
+      "distance": 249,
+      "speed": 1.3
+    },
+    {
+      "from": "Griffen_Hall",
+      "to": "Parking_Garage_3",
+      "pathway": "Parking_Garage_3_to_Griffen_Hall",
+      "direction": "North",
+      "distance": 249,
+      "speed": 1.3
+    },
+    {
+      "from": "Parking_Garage_3",
+      "to": "McTarnaghan_Hall",
+      "pathway": "Parking_Garage_3_to_McTarnaghan_Hall",
+      "direction": "Southeast",
+      "distance": 192,
+      "speed": 1.3
+    },
+    {
+      "from": "McTarnaghan_Hall",
+      "to": "Parking_Garage_3",
+      "pathway": "Parking_Garage_3_to_McTarnaghan_Hall",
+      "direction": "Northwest",
+      "distance": 192,
+      "speed": 1.3
+    },
+    {
+      "from": "Parking_Garage_4",
+      "to": "Lutgert_Hall",
+      "pathway": "Parking_Garage_4_to_Lutgert_Hall",
+      "direction": "South",
+      "distance": 126,
+      "speed": 1.4
+    },
+    {
+      "from": "Lutgert_Hall",
+      "to": "Parking_Garage_4",
+      "pathway": "Parking_Garage_4_to_Lutgert_Hall",
+      "direction": "North",
+      "distance": 126,
+      "speed": 1.4
+    },
+    {
+      "from": "Parking_Garage_4",
+      "to": "WGCU",
+      "pathway": "Parking_Garage_4_to_WGCU",
+      "direction": "East",
+      "distance": 113,
+      "speed": 1.4
+    },
+    {
+      "from": "WGCU",
+      "to": "Parking_Garage_4",
+      "pathway": "Parking_Garage_4_to_WGCU",
+      "direction": "West",
+      "distance": 113,
+      "speed": 1.4
+    },
+    {
+      "from": "Recreation_Center",
+      "to": "Biscayne_Hall",
+      "pathway": "Recreation_Center_to_Biscayne_Hall",
+      "direction": "East",
+      "distance": 220,
+      "speed": 0.9
+    },
+    {
+      "from": "Biscayne_Hall",
+      "to": "Recreation_Center",
+      "pathway": "Recreation_Center_to_Biscayne_Hall",
+      "direction": "West",
+      "distance": 220,
+      "speed": 0.9
+    },
+    {
+      "from": "Recreation_Field_#2",
+      "to": "Parking_Garage_B",
+      "pathway": "Recreation_Field_#2_to_Parking_Garage_B",
+      "direction": "South",
+      "distance": 94,
+      "speed": 1.3
+    },
+    {
+      "from": "Parking_Garage_B",
+      "to": "Recreation_Field_#2",
+      "pathway": "Recreation_Field_#2_to_Parking_Garage_B",
+      "direction": "North",
+      "distance": 94,
+      "speed": 1.3
+    },
+    {
+      "from": "Reed_Hall",
+      "to": "Griffen_Hall",
+      "pathway": "Reed_Hall_to_Griffen_Hall",
+      "direction": "North",
+      "distance": 62,
+      "speed": 1.3
+    },
+    {
+      "from": "Griffen_Hall",
+      "to": "Reed_Hall",
+      "pathway": "Reed_Hall_to_Griffen_Hall",
+      "direction": "South",
+      "distance": 62,
+      "speed": 1.3
+    },
+    {
+      "from": "Reed_Hall",
+      "to": "Whitaker_Hall",
+      "pathway": "Reed_Hall_to_Whitaker_Hall",
+      "direction": "West",
+      "distance": 97,
+      "speed": 1.3
+    },
+    {
+      "from": "Whitaker_Hall",
+      "to": "Reed_Hall",
+      "pathway": "Reed_Hall_to_Whitaker_Hall",
+      "direction": "East",
+      "distance": 97,
+      "speed": 1.3
+    },
+    {
+      "from": "Seidler_Hall",
+      "to": "Counseling",
+      "pathway": "Seidler_Hall_to_Counseling",
+      "direction": "South",
+      "distance": 74,
+      "speed": 1.3
+    },
+    {
+      "from": "Counseling",
+      "to": "Seidler_Hall",
+      "pathway": "Seidler_Hall_to_Counseling",
+      "direction": "North",
+      "distance": 74,
+      "speed": 1.3
+    },
+    {
+      "from": "Seidler_Hall",
+      "to": "Edward_Hall",
+      "pathway": "Seidler_Hall_to_Edward_Hall",
+      "direction": "North",
+      "distance": 77,
+      "speed": 0.9
+    },
+    {
+      "from": "Edward_Hall",
+      "to": "Seidler_Hall",
+      "pathway": "Seidler_Hall_to_Edward_Hall",
+      "direction": "South",
+      "distance": 77,
+      "speed": 0.9
+    },
+    {
+      "from": "Seidler_Hall",
+      "to": "Entrepreneurship",
+      "pathway": "Seidler_Hall_to_Entrepreneurship",
+      "direction": "Southwest",
+      "distance": 146,
+      "speed": 1.3
+    },
+    {
+      "from": "Entrepreneurship",
+      "to": "Seidler_Hall",
+      "pathway": "Seidler_Hall_to_Entrepreneurship",
+      "direction": "Northeast",
+      "distance": 146,
+      "speed": 1.3
+    },
+    {
+      "from": "Seidler_Hall",
+      "to": "Marieb_Hall",
+      "pathway": "Seidler_Hall_to_Marieb_Hall",
+      "direction": "Northwest",
+      "distance": 101,
+      "speed": 0.9
+    },
+    {
+      "from": "Marieb_Hall",
+      "to": "Seidler_Hall",
+      "pathway": "Seidler_Hall_to_Marieb_Hall",
+      "direction": "Southeast",
+      "distance": 101,
+      "speed": 0.9
+    },
+    {
+      "from": "Seidler_Hall",
+      "to": "Whitaker_Hall",
+      "pathway": "Seidler_Hall_to_Whitaker_Hall",
+      "direction": "East",
+      "distance": 82,
+      "speed": 1.3
+    },
+    {
+      "from": "Whitaker_Hall",
+      "to": "Seidler_Hall",
+      "pathway": "Seidler_Hall_to_Whitaker_Hall",
+      "direction": "West",
+      "distance": 82,
+      "speed": 1.3
+    },
+    {
+      "from": "SoVi_Dinning",
+      "to": "Eagle_Hall",
+      "pathway": "SoVi_Dinning_to_Eagle_Hall",
+      "direction": "Northeast",
+      "distance": 77,
+      "speed": 0.9
+    },
+    {
+      "from": "Eagle_Hall",
+      "to": "SoVi_Dinning",
+      "pathway": "SoVi_Dinning_to_Eagle_Hall",
+      "direction": "Southwest",
+      "distance": 77,
+      "speed": 0.9
+    },
+    {
+      "from": "SoVi_Dinning",
+      "to": "Osprey_Hall",
+      "pathway": "SoVi_Dinning_to_Osprey_Hall",
+      "direction": "East",
+      "distance": 113,
+      "speed": 0.9
+    },
+    {
+      "from": "Osprey_Hall",
+      "to": "SoVi_Dinning",
+      "pathway": "SoVi_Dinning_to_Osprey_Hall",
+      "direction": "West",
+      "distance": 113,
+      "speed": 0.9
+    },
+    {
+      "from": "Student_Union",
+      "to": "Hospitality",
+      "pathway": "Student_Union_to_Hospitality",
+      "direction": "East",
+      "distance": 91,
+      "speed": 1.3
+    },
+    {
+      "from": "Hospitality",
+      "to": "Student_Union",
+      "pathway": "Student_Union_to_Hospitality",
+      "direction": "West",
+      "distance": 91,
+      "speed": 1.3
+    },
+    {
+      "from": "Student_Union",
+      "to": "North_Lake_Village",
+      "pathway": "Student_Union_to_North_Lake_Village",
+      "direction": "Northeast",
+      "distance": 571,
+      "speed": 1.4
+    },
+    {
+      "from": "North_Lake_Village",
+      "to": "Student_Union",
+      "pathway": "Student_Union_to_North_Lake_Village",
+      "direction": "Southwest",
+      "distance": 571,
+      "speed": 1.4
+    },
+    {
+      "from": "Student_Union",
+      "to": "Parking_Garage_3",
+      "pathway": "Student_Union_to_Parking_Garage_3",
+      "direction": "West",
+      "distance": 233,
+      "speed": 1.4
+    },
+    {
+      "from": "Parking_Garage_3",
+      "to": "Student_Union",
+      "pathway": "Student_Union_to_Parking_Garage_3",
+      "direction": "East",
+      "distance": 233,
+      "speed": 1.4
+    },
+    {
+      "from": "Veterans_Pavilion",
+      "to": "Library",
+      "pathway": "Veterans_Pavilion_to_Library",
+      "direction": "Southwest",
+      "distance": 97,
+      "speed": 1.3
+    },
+    {
+      "from": "Library",
+      "to": "Veterans_Pavilion",
+      "pathway": "Veterans_Pavilion_to_Library",
+      "direction": "Northeast",
+      "distance": 97,
+      "speed": 1.3
+    },
+    {
+      "from": "Water_School",
+      "to": "Veterans_Pavilion",
+      "pathway": "Water_School_to_Veterans_Pavilion",
+      "direction": "Southwest",
+      "distance": 184,
+      "speed": 1.3
+    },
+    {
+      "from": "Veterans_Pavilion",
+      "to": "Water_School",
+      "pathway": "Water_School_to_Veterans_Pavilion",
+      "direction": "Northeast",
+      "distance": 184,
+      "speed": 1.3
+    },
+    {
+      "from": "Welcome_Center",
+      "to": "Kleist_Health_Ed.",
+      "pathway": "Welcome_Center_to_Kleist_Health_Ed.",
+      "direction": "South",
+      "distance": 249,
+      "speed": 1.4
+    },
+    {
+      "from": "Kleist_Health_Ed.",
+      "to": "Welcome_Center",
+      "pathway": "Welcome_Center_to_Kleist_Health_Ed.",
+      "direction": "North",
+      "distance": 249,
+      "speed": 1.4
+    },
+    {
+      "from": "WGCU",
+      "to": "Edward_Hall",
+      "pathway": "WGCU_to_Edward_Hall",
+      "direction": "South",
+      "distance": 158,
+      "speed": 1.3
+    },
+    {
+      "from": "Edward_Hall",
+      "to": "WGCU",
+      "pathway": "WGCU_to_Edward_Hall",
+      "direction": "North",
+      "distance": 158,
+      "speed": 1.3
+    },
+    {
+      "from": "WGCU",
+      "to": "Parking_Garage_3",
+      "pathway": "WGCU_to_Parking_Garage_3",
+      "direction": "Northeast",
+      "distance": 202,
+      "speed": 1.4
+    },
+    {
+      "from": "Parking_Garage_3",
+      "to": "WGCU",
+      "pathway": "WGCU_to_Parking_Garage_3",
+      "direction": "Southwest",
+      "distance": 202,
+      "speed": 1.4
+    },
+    {
+      "from": "Whitaker_Hall",
+      "to": "Merwin_Hall",
+      "pathway": "Whitaker_Hall_to_Merwin_Hall",
+      "direction": "North",
+      "distance": 68,
+      "speed": 0.9
+    },
+    {
+      "from": "Merwin_Hall",
+      "to": "Whitaker_Hall",
+      "pathway": "Whitaker_Hall_to_Merwin_Hall",
+      "direction": "South",
+      "distance": 68,
+      "speed": 0.9
+    },
+    {
+      "from": "Whitaker_Hall",
+      "to": "Parking_Garage_2",
+      "pathway": "Whitaker_Hall_to_Parking_Garage_2",
+      "direction": "South",
+      "distance": 502,
+      "speed": 1.3
+    },
+    {
+      "from": "Parking_Garage_2",
+      "to": "Whitaker_Hall",
+      "pathway": "Whitaker_Hall_to_Parking_Garage_2",
+      "direction": "North",
+      "distance": 502,
+      "speed": 1.3
+    }
+  ]
+}
