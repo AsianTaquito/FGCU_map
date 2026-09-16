@@ -30,8 +30,15 @@ jobs:
       - name: Fail if the committed data is out of date
         run: git diff --exit-code FGCU_Map/campus.json
 
+  # Deploying is opt-in for now: Pages is not enabled on the repo yet, and
+  # actions/configure-pages fails if it cannot find a Pages site. Pushes still
+  # run `verify` and stay green, while this job reports as Skipped.
+  #
+  # To go live: enable Pages (Settings -> Pages -> Source: GitHub Actions),
+  # then delete the `if:` line below so every push to main deploys.
   deploy:
     needs: verify
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
