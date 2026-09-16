@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FGCU Campus Map</title>
+    <meta name="description" content="Find the shortest or quickest walking route between buildings on the FGCU campus." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="panel">
+        <header class="panel__head">
+          <h1>FGCU Campus Map</h1>
+          <p>Pick two buildings, or tap them on the map.</p>
+        </header>
+
+        <div class="field">
+          <label for="start">Start</label>
+          <select id="start"></select>
+        </div>
+
+        <button type="button" id="swap" class="swap" title="Swap start and destination">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v13M7 4 4 7.5M7 4l3 3.5M17 20V7m0 13 3-3.5M17 20l-3-3.5"/></svg>
+          Swap
+        </button>
+
+        <div class="field">
+          <label for="end">Destination</label>
+          <select id="end"></select>
+        </div>
+
+        <div class="field">
+          <span class="field__label">Route by</span>
+          <div class="segmented" role="radiogroup" aria-label="Route preference">
+            <label><input type="radio" name="mode" value="shortest" checked /><span>Shortest</span></label>
+            <label><input type="radio" name="mode" value="quickest" /><span>Quickest</span></label>
+          </div>
+        </div>
+
+        <div id="summary" class="summary" aria-live="polite"></div>
+
+        <ol id="steps" class="steps"></ol>
+
+        <footer class="panel__foot">
+          <button type="button" id="clear" class="ghost">Clear route</button>
+        </footer>
+      </aside>
+
+      <main class="map">
+        <svg id="map" role="img" aria-label="Map of FGCU campus buildings and walkways">
+          <g id="viewport">
+            <g id="layer-paths"></g>
+            <g id="layer-route"></g>
+            <g id="layer-nodes"></g>
+            <g id="layer-labels"></g>
+          </g>
+        </svg>
+
+        <div class="map__controls">
+          <button type="button" data-zoom="in" title="Zoom in" aria-label="Zoom in">+</button>
+          <button type="button" data-zoom="out" title="Zoom out" aria-label="Zoom out">&minus;</button>
+          <button type="button" data-zoom="reset" title="Reset view" aria-label="Reset view">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9M20 4v4h-4"/></svg>
+          </button>
+        </div>
+
+        <p class="map__hint" id="hint">Tap a building to set your start</p>
+      </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
