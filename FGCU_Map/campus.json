@@ -1528,7 +1528,8 @@
       "pathway": "Whitaker_Hall_to_Parking_Garage_2",
       "direction": "South",
       "distance": 502,
-      "speed": 1.3
+      "speed": 1.3,
+      "bridge": true
     },
     {
       "from": "Parking_Garage_2",
@@ -1536,7 +1537,8 @@
       "pathway": "Whitaker_Hall_to_Parking_Garage_2",
       "direction": "North",
       "distance": 502,
-      "speed": 1.3
+      "speed": 1.3,
+      "bridge": true
     }
   ]
 }

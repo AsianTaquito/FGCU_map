@@ -79,12 +79,20 @@ function drawPathways() {
     const a = positions.get(edge.from);
     const b = positions.get(edge.to);
     const line = document.createElementNS(SVG_NS, "line");
-    line.setAttribute("class", "edge");
+    line.setAttribute("class", edge.bridge ? "edge edge--bridge" : "edge");
     line.setAttribute("x1", a.x);
     line.setAttribute("y1", a.y);
     line.setAttribute("x2", b.x);
     line.setAttribute("y2", b.y);
     el.paths.append(line);
+
+    // A bridge is the wide rail stroke above plus a dashed deck over it, so the
+    // gaps between the planks read as a boardwalk from above.
+    if (edge.bridge) {
+      const deck = line.cloneNode();
+      deck.setAttribute("class", "bridge-deck");
+      el.paths.append(deck);
+    }
   }
 }
 

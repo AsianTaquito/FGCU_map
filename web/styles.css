@@ -7,7 +7,12 @@
   --brand: #00674f;
   --brand-soft: #e2efea;
   --accent: #c8102e;
-  --path: #c3cec8;
+  --path: #f0efe8;
+  --grass: #dbe6cf;
+  --woods: #b5cba6;
+  --water: #b9d8e3;
+  --asphalt: #e0dfda;
+  --turf: #c9dfb4;
   color-scheme: light;
 }
 
@@ -244,7 +249,28 @@ input:focus-visible + span {
 
 /* ---------- map ---------- */
 
-.map { position: relative; overflow: hidden; }
+.map { position: relative; overflow: hidden; background: var(--grass); }
+
+/* ---------- terrain (bird's eye) ---------- */
+
+/* Decoration only - without this the ground rect swallows every tap. */
+#layer-terrain { pointer-events: none; }
+
+.ground { fill: var(--grass); }
+.woods { fill: var(--woods); }
+.lot { fill: var(--asphalt); }
+
+.field {
+  fill: var(--turf);
+  stroke: rgba(255, 255, 255, 0.75);
+  stroke-width: 2;
+}
+
+.water {
+  fill: var(--water);
+  stroke: #a3c6d4;
+  stroke-width: 1.5;
+}
 
 #map {
   display: block;
@@ -261,8 +287,22 @@ input:focus-visible + span {
 .edge {
   fill: none;
   stroke: var(--path);
-  stroke-width: 2.4;
+  stroke-width: 3;
   stroke-linecap: round;
+}
+
+.edge--bridge {
+  stroke: #a8916c;
+  stroke-width: 7.5;
+  stroke-linecap: butt;
+}
+
+.bridge-deck {
+  fill: none;
+  stroke: #f4ecdb;
+  stroke-width: 5.2;
+  stroke-linecap: butt;
+  stroke-dasharray: 2.5 3.5;
 }
 
 .route-glow {
@@ -310,7 +350,7 @@ input:focus-visible + span {
   font-weight: 500;
   fill: #46554e;
   paint-order: stroke;
-  stroke: var(--bg);
+  stroke: rgba(255, 255, 255, 0.9);
   stroke-width: 3.5;
   stroke-linejoin: round;
   pointer-events: none;
