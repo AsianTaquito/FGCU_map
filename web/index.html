@@ -50,6 +50,31 @@
       <main class="map">
         <svg id="map" role="img" aria-label="Map of FGCU campus buildings and walkways">
           <g id="viewport">
+          <g id="layer-terrain" aria-hidden="true">
+            <rect class="ground" x="-400" y="-400" width="1800" height="1740" />
+
+            <!-- preserve / tree canopy -->
+            <path class="woods" d="M-60 640 C60 605 205 660 300 700 C365 727 340 820 300 900 C260 972 100 990 -60 990 Z" />
+            <path class="woods" d="M-60-60 C80-60 222-28 250 60 C276 142 200 232 120 270 C40 306-60 292-60 292 Z" />
+            <path class="woods" d="M112 330 C192 308 252 362 245 442 C238 542 200 622 130 642 C92 652 96 480 112 330 Z" />
+            <path class="woods" d="M1060 430 C968 452 880 500 870 590 C860 692 942 742 1060 752 Z" />
+            <path class="woods" d="M470 990 C500 930 560 928 600 955 C630 975 632 990 632 990 Z" />
+
+            <!-- surface parking -->
+            <rect class="lot" x="300" y="140" width="220" height="76" rx="6" />
+            <rect class="lot" x="710" y="192" width="142" height="78" rx="6" />
+            <rect class="lot" x="372" y="690" width="168" height="66" rx="6" />
+
+            <!-- athletic fields -->
+            <rect class="field" x="678" y="386" width="176" height="104" rx="4" />
+            <rect class="field" x="892" y="772" width="112" height="118" rx="4" />
+
+            <!-- water -->
+            <ellipse class="water" cx="690" cy="675" rx="136" ry="82" />
+            <ellipse class="water" cx="620" cy="166" rx="70" ry="40" />
+            <ellipse class="water" cx="176" cy="722" rx="84" ry="50" />
+          </g>
+
             <g id="layer-paths"></g>
             <g id="layer-route"></g>
             <g id="layer-nodes"></g>
