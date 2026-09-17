@@ -103,7 +103,6 @@ function drawBuildings() {
     title.textContent = building.label;
 
     group.append(circle, title);
-    group.addEventListener("click", () => pick(building.id));
     group.addEventListener("pointerenter", () => setLabelActive(building.id, true));
     group.addEventListener("pointerleave", () => setLabelActive(building.id, false));
     el.nodes.append(group);
@@ -377,22 +376,47 @@ function setupPanZoom() {
     zoomAt(event.deltaY < 0 ? 1.15 : 1 / 1.15, toSvg(event));
   }, { passive: false });
 
+  // px/py are read off the point one at a time on purpose: the DOMPoint that
+  // matrixTransform returns keeps x and y on its prototype, so spreading it
+  // copies nothing and every later delta comes out NaN.
   el.svg.addEventListener("pointerdown", (event) => {
-    dragging = { ...toSvg(event), x0: view.x, y0: view.y };
+    const point = toSvg(event);
+    dragging = {
+      px: point.x,
+      py: point.y,
+      x0: view.x,
+      y0: view.y,
+      cx: event.clientX,
+      cy: event.clientY,
+      moved: 0,
+      node: event.target.closest?.(".node") ?? null,
+    };
     el.svg.setPointerCapture(event.pointerId);
     el.svg.classList.add("is-panning");
   });
 
-  el.svg.addEventListener("pointermove", (event) => {
+  // On window, not the svg: a captured pointer still bubbles here, and a move
+  // that slips outside the map keeps panning instead of stalling.
+  window.addEventListener("pointermove", (event) => {
     if (!dragging) return;
+    dragging.moved = Math.max(
+      dragging.moved,
+      Math.hypot(event.clientX - dragging.cx, event.clientY - dragging.cy)
+    );
     const now = toSvg(event);
-    view.x = dragging.x0 + (now.x - dragging.x) * view.scale;
-    view.y = dragging.y0 + (now.y - dragging.y) * view.scale;
+    view.x = dragging.x0 + (now.x - dragging.px);
+    view.y = dragging.y0 + (now.y - dragging.py);
     apply();
   });
 
+  // Buildings cannot use a click listener: capturing the pointer retargets the
+  // click to the <svg>. A press that never turned into a pan is the tap.
+  window.addEventListener("pointerup", () => {
+    if (dragging?.node && dragging.moved < 4) pick(dragging.node.dataset.id);
+  });
+
   for (const type of ["pointerup", "pointercancel"]) {
-    el.svg.addEventListener(type, () => {
+    window.addEventListener(type, () => {
       dragging = null;
       el.svg.classList.remove("is-panning");
     });
