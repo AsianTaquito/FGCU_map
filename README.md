@@ -6,7 +6,7 @@ An interactive walking-route map for the Florida Gulf Coast University (FGCU) ca
 
 ## 📜 Origin
 
-This started as the original C++ program I wrote for my **Data Structures & Algorithms** class — a terminal app that read campus data from a CSV and ran Dijkstra's algorithm to find a path between two buildings. That code is still in this repo, unchanged, in [`FGCU_Map/main.cpp`](FGCU_Map/main.cpp) and [`FGCU_Map/Graph.h`](FGCU_Map/Graph.h).
+This started as the original C++ program I wrote for my **Data Structures & Algorithms** class — a terminal app that read campus data from a CSV and ran Dijkstra's algorithm to find a path between two buildings. That code is still in this repo, unchanged, in [`FGCU_Map/legacy code/`](FGCU_Map/legacy%20code/).
 
 I've decided to build on top of it, starting with this web app. The routing logic has been ported to JavaScript so it can run in the browser, and the campus data now lives in JSON instead of being parsed from CSV at runtime.
 
@@ -30,12 +30,13 @@ I've decided to build on top of it, starting with this web app. The routing logi
 
 ```
 FGCU_Map/        campus data + routing logic (shared core)
-  fgcu.csv         original source data, still the thing you edit
-  campus.json      generated map database: 42 buildings, 160 edges
-  build-data.js    regenerates campus.json from fgcu.csv
-  graph.js         Dijkstra implementation (JS port of Graph.h / main.cpp)
-  main.cpp         original C++ program (class project, superseded)
-  Graph.h
+  campus.json      the map database: 42 buildings, 160 edges — single source of truth
+  build-data.js    re-solves building coordinates from the edges in campus.json
+  graph.js         Dijkstra implementation (JS port of the original C++)
+  legacy code/     the original class project, archived
+    main.cpp
+    Graph.h
+    fgcu.csv       the CSV the C++ version read at runtime
 web/             the web app
   index.html
   styles.css
@@ -44,9 +45,9 @@ web/             the web app
 
 ### Where the map coordinates come from
 
-The CSV never contained building positions — only a compass `direction` and a `distance` for each pathway. `FGCU_Map/build-data.js` treats those as constraints and solves for a set of coordinates that best satisfies all 160 of them at once (least-squares relaxation). The result stays geographically honest: the median edge is within **16 ft** of its stated distance, and every edge still points within its labeled compass octant.
+The source data never contained building positions — only a compass `direction` and a `distance` for each pathway. `FGCU_Map/build-data.js` treats those as constraints and solves for a set of coordinates that best satisfies all 160 of them at once (least-squares relaxation). The result stays geographically honest: the median edge is within **16 ft** of its stated distance, and every edge still points within its labeled compass octant.
 
-To regenerate after editing `fgcu.csv`:
+Coordinates are derived, so don't hand-edit them — adding one building shifts its neighbors too. Add or change entries in the `edges` array, then re-solve:
 
 ```sh
 node FGCU_Map/build-data.js
