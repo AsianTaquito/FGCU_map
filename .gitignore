@@ -1,0 +1,14 @@
+# C++ build output (CMake / CLion)
+cmake-build-*/
+
+# Node
+node_modules/
+
+# graphify
+graphify-out/
+
+# Editor / OS
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
