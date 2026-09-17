@@ -1,5 +1,7 @@
-// Converts fgcu.csv into campus.json.
-// Building coordinates are derived from the CSV 
+// Solves building coordinates in campus.json from its own edges: each carries a
+// compass direction and a distance in feet, fit as a least-squares layout rather
+// than hand-placed. Reads and rewrites the same file, so re-running is a no-op
+// unless the edges changed.
 
 const fs = require("fs");
 const path = require("path");
@@ -15,31 +17,10 @@ const BEARINGS = {
   Northwest: 315,
 };
 
-const CSV_PATH = path.join(__dirname, "fgcu.csv");
-const OUT_PATH = path.join(__dirname, "campus.json");
+const DATA_PATH = path.join(__dirname, "campus.json");
 
 const VIEW_WIDTH = 1000;
 const PADDING = 60;
-
-function parseCsv(text) {
-  return text
-    .split(/\r?\n/)
-    .filter((line) => line.trim().length > 0)
-    .map((line, i) => {
-      const [from, pathway, to, direction, distance, speed] = line.split(",");
-      if (!(direction in BEARINGS)) {
-        throw new Error(`Line ${i + 1}: unknown direction "${direction}"`);
-      }
-      return {
-        from,
-        to,
-        pathway,
-        direction,
-        distance: Number(distance),
-        speed: Number(speed),
-      };
-    });
-}
 
 // Offset in feet from `from` to `to`, in screen orientation (x east, y south).
 function offsetOf(edge) {
@@ -151,7 +132,12 @@ function reportFit(edges, positions, scale) {
   return Math.round(worst);
 }
 
-const edges = parseCsv(fs.readFileSync(CSV_PATH, "utf8"));
+const { edges } = JSON.parse(fs.readFileSync(DATA_PATH, "utf8"));
+for (const [i, edge] of edges.entries()) {
+  if (!(edge.direction in BEARINGS)) {
+    throw new Error(`Edge ${i} (${edge.from} -> ${edge.to}): unknown direction "${edge.direction}"`);
+  }
+}
 const names = [...new Set(edges.flatMap((e) => [e.from, e.to]))].sort();
 
 assertConnected(names, edges);
@@ -163,7 +149,6 @@ const scale = (VIEW_WIDTH - PADDING * 2) /
     Math.min(...[...solved.values()].map((p) => p.x)));
 
 const campus = {
-  source: "FGCU_Map/fgcu.csv",
   view: { width, height },
   buildings: names.map((name) => ({
     id: name,
@@ -174,8 +159,7 @@ const campus = {
   edges,
 };
 
-fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
-fs.writeFileSync(OUT_PATH, JSON.stringify(campus, null, 2) + "\n");
+fs.writeFileSync(DATA_PATH, JSON.stringify(campus, null, 2) + "\n");
 
-console.log(`${names.length} buildings, ${edges.length} edges -> ${path.basename(OUT_PATH)}`);
+console.log(`${names.length} buildings, ${edges.length} edges -> ${path.basename(DATA_PATH)}`);
 console.log(`view ${width} x ${height}, worst edge error ${reportFit(edges, scaled, scale)} ft`);
