@@ -1,6 +1,7 @@
 import { buildGraph, findRoute, minutesFor } from "../FGCU_Map/graph.js";
 
 const SVG_NS = "http://www.w3.org/2000/svg";
+const ICON_SIZE = 22;
 const BEARINGS = {
   North: 0, Northeast: 45, East: 90, Southeast: 135,
   South: 180, Southwest: 225, West: 270, Northwest: 315,
@@ -96,7 +97,22 @@ function drawPathways() {
   }
 }
 
+// A <symbol> serves the building its own id names, plus any listed in its
+// data-for, so one drawing covers a dozen lookalike halls.
+function iconIndex() {
+  const index = new Map();
+  for (const symbol of document.querySelectorAll("symbol[id^='icon-']")) {
+    index.set(symbol.id.slice("icon-".length), symbol.id);
+    for (const id of (symbol.dataset.for ?? "").split(/\s+/).filter(Boolean)) {
+      index.set(id, symbol.id);
+    }
+  }
+  return index;
+}
+
 function drawBuildings() {
+  const icons = iconIndex();
+
   for (const building of campus.buildings) {
     const group = document.createElementNS(SVG_NS, "g");
     group.setAttribute("class", "node");
@@ -111,6 +127,30 @@ function drawBuildings() {
     title.textContent = building.label;
 
     group.append(circle, title);
+
+    // A building draws as an icon when a <symbol> claims it; no icon, no
+    // config. The circle stays underneath as the hit target.
+    const iconId = icons.get(building.id);
+    if (iconId) {
+      group.classList.add("has-icon");
+
+      // The icon hangs off a <g> parked at the building, drawn around 0,0 in
+      // that local space. Scaling it then grows it in place, with no reliance
+      // on transform-box: fill-box, which does not resolve on <use>.
+      const anchor = document.createElementNS(SVG_NS, "g");
+      anchor.setAttribute("transform", `translate(${building.x} ${building.y})`);
+
+      const use = document.createElementNS(SVG_NS, "use");
+      use.setAttribute("href", `#${iconId}`);
+      use.setAttribute("class", "icon");
+      use.setAttribute("x", -ICON_SIZE / 2);
+      use.setAttribute("y", -ICON_SIZE / 2);
+      use.setAttribute("width", ICON_SIZE);
+      use.setAttribute("height", ICON_SIZE);
+
+      anchor.append(use);
+      group.append(anchor);
+    }
     group.addEventListener("pointerenter", () => setLabelActive(building.id, true));
     group.addEventListener("pointerleave", () => setLabelActive(building.id, false));
     el.nodes.append(group);
@@ -154,8 +194,10 @@ function drawLabels() {
   }
 }
 
+// Its own class, not is-active: render() owns that one for the start and end,
+// and a hover leaving would otherwise strip a selected label's emphasis.
 function setLabelActive(id, active) {
-  labelEls.get(id)?.classList.toggle("is-active", active);
+  labelEls.get(id)?.classList.toggle("is-hovered", active);
 }
 
 /* ---------------- controls ---------------- */

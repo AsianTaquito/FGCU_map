@@ -340,10 +340,41 @@ input:focus-visible + span {
 }
 
 .node { cursor: pointer; }
-.node:hover circle { r: 8; stroke: var(--brand); stroke-width: 2.4; }
+.node:hover circle { r: 11; stroke: var(--brand); stroke-width: 2.4; }
 .node.on-route circle { fill: var(--brand-soft); stroke: var(--brand); }
 .node.is-start circle { r: 8.5; fill: var(--brand); stroke: #fff; stroke-width: 2.6; }
 .node.is-end circle { r: 8.5; fill: var(--accent); stroke: #fff; stroke-width: 2.6; }
+
+/* ---------- building icons ---------- */
+
+.node.has-icon circle { r: 13; }
+.node.has-icon:hover circle { r: 27; }
+/* Only hover grows the disc: selection shows in the icon and the label. */
+.node.has-icon.is-start circle,
+.node.has-icon.is-end circle { r: 13; }
+
+/* The icon carries its own palette, so state reads as colour vs greyscale
+   rather than a fill swap: an inline fill on each path outranks any we set. */
+.icon {
+  pointer-events: none;
+  transform-origin: 0 0;
+  filter: grayscale(1);
+  transition: transform 0.14s ease, filter 0.14s ease;
+}
+
+.node:hover .icon,
+.node.on-route .icon,
+.node.is-start .icon,
+.node.is-end .icon { filter: none; }
+
+/* Selected stays expanded, so the route's ends keep reading at a glance. */
+.node:hover .icon,
+.node.is-start .icon,
+.node.is-end .icon { transform: scale(2.4); }
+
+@media (prefers-reduced-motion: reduce) {
+  .icon { transition: none; }
+}
 
 .label {
   font-size: 10.5px;
@@ -355,9 +386,17 @@ input:focus-visible + span {
   stroke-linejoin: round;
   pointer-events: none;
   text-anchor: middle;
+  transition: font-size 0.14s ease, fill 0.14s ease;
 }
 
+/* Selected keeps a quiet emphasis; only hover grows it, same as the disc. */
 .label.is-active { font-weight: 700; font-size: 12px; fill: var(--ink); }
+
+.label.is-hovered { font-weight: 700; font-size: 19px; fill: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .label { transition: none; }
+}
 
 .map__controls {
   position: absolute;
