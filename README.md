@@ -1,22 +1,19 @@
-# FGCU Map 🗺️
+# FGCU Map 
 
 An interactive walking-route map for the Florida Gulf Coast University (FGCU) campus. Pick any two buildings and it finds the **shortest** or **quickest** route using Dijkstra's algorithm, then draws it on a map with step-by-step directions.
 
 ---
 
-## 📜 Origin
+## Origin
 
 This started as the original C++ program I wrote for my **Data Structures & Algorithms** class — a terminal app that read campus data from a CSV and ran Dijkstra's algorithm to find a path between two buildings. That code is still in this repo, unchanged, in [`FGCU_Map/legacy code/`](FGCU_Map/legacy%20code/).
 
 I've decided to build on top of it, starting with this web app. The routing logic has been ported to JavaScript so it can run in the browser, and the campus data now lives in JSON instead of being parsed from CSV at runtime.
 
-> **Note:** the port fixes two bugs found in the original C++ while converting it:
-> 1. The priority queue was declared `pair<string, double>`, so `greater<>` ordered entries by **building name** rather than by weight — breaking Dijkstra's core invariant and returning suboptimal routes.
-> 2. `addEdge` aggregate-initialized the `edge` struct with `pathway` and `direction` swapped.
 
 ---
 
-## 🚀 Features
+## Features
 - Click any two buildings on the map, or pick them from the dropdowns
 - Toggle between **shortest** (fewest feet) and **quickest** (least walking time, accounting for each pathway's speed)
 - Turn-by-turn directions with compass headings, distances, and per-leg times
@@ -26,7 +23,7 @@ I've decided to build on top of it, starting with this web app. The routing logi
 
 ---
 
-## 🗂️ Layout
+## Layout
 
 ```
 FGCU_Map/        campus data + routing logic (shared core)
@@ -55,7 +52,7 @@ node FGCU_Map/build-data.js
 
 ---
 
-## 🧑‍💻 Running it locally
+##  Running it locally
 
 The page loads its data with `fetch`, so it needs a real server — opening `index.html` from the filesystem won't work. From the repo root:
 
@@ -67,7 +64,7 @@ Then open `http://localhost:8080/web/`.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 - **Web app:** plain HTML, CSS, and JavaScript — no framework, no build step, no dependencies
 - **Algorithms:** Dijkstra's shortest path; least-squares layout solving for map coordinates
 - **Hosting:** GitHub Pages, deployed by GitHub Actions on every push to `main`
