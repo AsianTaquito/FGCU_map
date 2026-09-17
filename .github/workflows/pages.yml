@@ -24,10 +24,10 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Rebuild campus.json from fgcu.csv
+      - name: Re-solve building coordinates
         run: node FGCU_Map/build-data.js
 
-      - name: Fail if the committed data is out of date
+      - name: Fail if coordinates are stale for the current edges
         run: git diff --exit-code FGCU_Map/campus.json
 
   # Deploying is opt-in for now: Pages is not enabled on the repo yet, and
