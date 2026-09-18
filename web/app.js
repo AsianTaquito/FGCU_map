@@ -235,6 +235,15 @@ function bindControls() {
 
   document.getElementById("clear").addEventListener("click", clear);
 
+  const toggle = document.getElementById("panel-toggle");
+  toggle.addEventListener("click", () => {
+    const open = !document.querySelector(".app").classList.toggle("is-collapsed");
+    toggle.setAttribute("aria-expanded", String(open));
+    const text = open ? "Hide panel" : "Show panel";
+    toggle.title = text;
+    toggle.setAttribute("aria-label", text);
+  });
+
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") clear();
   });
