@@ -2,6 +2,8 @@ import { buildGraph, findRoute, minutesFor } from "../FGCU_Map/graph.js";
 
 const SVG_NS = "http://www.w3.org/2000/svg";
 const ICON_SIZE = 22;
+// Hover baseline: clear of the disc the icon grows into (r 27) plus a line of text.
+const LABEL_TUCK = 42;
 const BEARINGS = {
   North: 0, Northeast: 45, East: 90, Southeast: 135,
   South: 180, Southwest: 225, West: 270, Northwest: 315,
@@ -189,6 +191,8 @@ function drawLabels() {
     text.setAttribute("class", "label");
     text.setAttribute("x", spot.x);
     text.setAttribute("y", spot.y);
+    // The shift from that resting spot back under its own building, for hover.
+    text.dataset.tuck = `${building.x - spot.x} ${building.y + LABEL_TUCK - spot.y}`;
     text.textContent = building.label;
     el.labels.append(text);
     labelEls.set(building.id, text);
@@ -212,6 +216,10 @@ function hoverNode(id, active) {
   if (active === (node.parentNode === el.hover)) return;
 
   label.classList.toggle("is-hovered", active);
+  // Collision avoidance may have parked the name off to a side; hovering pulls
+  // it back under its own icon, where the enlarged drawing can't cover it.
+  if (active) label.setAttribute("transform", `translate(${label.dataset.tuck})`);
+  else label.removeAttribute("transform");
   if (active) el.hover.append(node, label);
   else {
     el.nodes.append(node);

@@ -421,7 +421,7 @@ input:focus-visible + span {
   stroke-linejoin: round;
   pointer-events: none;
   text-anchor: middle;
-  transition: font-size 0.14s ease, fill 0.14s ease;
+  transition: font-size 0.14s ease, fill 0.14s ease, transform 0.14s ease;
 }
 
 /* Selected keeps a quiet emphasis; only hover grows it, same as the disc. */
