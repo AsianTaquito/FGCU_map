@@ -53,6 +53,7 @@
             <!-- id is icon-<building id>: drawBuildings picks it up by name. -->
             <!-- data-for shares one drawing across lookalike halls. -->
             <symbol id="icon-academic" viewBox="0 0 511.996 511.996" data-for="Lutgert_Hall Marieb_Hall Holmes_Hall Edward_Hall Merwin_Hall Seidler_Hall Whitaker_Hall Reed_Hall Griffen_Hall Water_School">
+            <symbol id="icon-academic" viewBox="0 0 511.996 511.996" data-for="Lutgert_Hall Marieb_Hall Holmes_Hall Edward_Hall Merwin_Hall Seidler_Hall Whitaker_Hall Reed_Hall Griffen_Hall Water_School Howard_Hall McTarnaghan_Hall">
               <rect x="151.996" y="168.499" style="fill:#56b99b;" width="208.003" height="16"/>
               <rect x="96" y="192.499" style="fill:#f7f7f7;" width="319.996" height="24"/>
               <path style="fill:#56b99b;" d="M176,104.503c0-44.182,35.817-80,80-80c44.183,0,80,35.817,80,80"/>
@@ -122,6 +123,9 @@
             <rect class="field" x="892" y="772" width="112" height="118" rx="4" />
 
             <!-- water -->
+            <!-- North lake: everything above North Lake Village (y60), no further
+                 left than Parking Garage 3 (x457). Shore kept off the node at y48. -->
+            <path class="water" d="M457,-260 L1080,-260 L1080,26 C1012,50 948,16 880,34 C818,50 768,20 700,38 C638,54 558,18 505,40 C490,46 472,42 457,45 Z" />
             <ellipse class="water" cx="690" cy="675" rx="136" ry="82" />
             <ellipse class="water" cx="470" cy="545" rx="95" ry="60" />
             <ellipse class="water" cx="176" cy="722" rx="84" ry="50" />
@@ -131,8 +135,15 @@
             <g id="layer-route"></g>
             <g id="layer-nodes"></g>
             <g id="layer-labels"></g>
+            <!-- Painted last, so whatever is hovered sits above every layer. -->
+            <g id="layer-hover"></g>
           </g>
         </svg>
+
+        <button type="button" id="panel-toggle" class="panel-toggle" aria-controls="panel"
+                aria-expanded="true" title="Hide panel" aria-label="Hide panel">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>
+        </button>
 
         <div class="map__controls">
           <button type="button" data-zoom="in" title="Zoom in" aria-label="Zoom in">+</button>

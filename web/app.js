@@ -14,6 +14,7 @@ const el = {
   route: document.getElementById("layer-route"),
   nodes: document.getElementById("layer-nodes"),
   labels: document.getElementById("layer-labels"),
+  hover: document.getElementById("layer-hover"),
   start: document.getElementById("start"),
   end: document.getElementById("end"),
   summary: document.getElementById("summary"),
@@ -153,6 +154,8 @@ function drawBuildings() {
     }
     group.addEventListener("pointerenter", () => setLabelActive(building.id, true));
     group.addEventListener("pointerleave", () => setLabelActive(building.id, false));
+    group.addEventListener("pointerenter", () => hoverNode(building.id, true));
+    group.addEventListener("pointerleave", () => hoverNode(building.id, false));
     el.nodes.append(group);
     nodeEls.set(building.id, group);
   }
@@ -198,6 +201,28 @@ function drawLabels() {
 // and a hover leaving would otherwise strip a selected label's emphasis.
 function setLabelActive(id, active) {
   labelEls.get(id)?.classList.toggle("is-hovered", active);
+// SVG has no z-index, so the hovered building moves into the last layer to
+// paint over every other icon and name, its label after it so the name stays
+// readable on top of the enlarged icon.
+//
+// is-hovered is its own class, not is-active: render() owns that one for the
+// start and end, and leaving would otherwise strip a selected label's emphasis.
+function hoverNode(id, active) {
+  const node = nodeEls.get(id);
+  const label = labelEls.get(id);
+  if (!node || !label) return;
+
+  // Moving an element re-runs hit testing, which can fire a leave for the node
+  // still under the pointer. Ignoring that keeps it from ping-ponging layers.
+  if (!active && node.matches(":hover")) return;
+  if (active === (node.parentNode === el.hover)) return;
+
+  label.classList.toggle("is-hovered", active);
+  if (active) el.hover.append(node, label);
+  else {
+    el.nodes.append(node);
+    el.labels.append(label);
+  }
 }
 
 /* ---------------- controls ---------------- */
