@@ -152,8 +152,6 @@ function drawBuildings() {
       anchor.append(use);
       group.append(anchor);
     }
-    group.addEventListener("pointerenter", () => setLabelActive(building.id, true));
-    group.addEventListener("pointerleave", () => setLabelActive(building.id, false));
     group.addEventListener("pointerenter", () => hoverNode(building.id, true));
     group.addEventListener("pointerleave", () => hoverNode(building.id, false));
     el.nodes.append(group);
@@ -197,10 +195,6 @@ function drawLabels() {
   }
 }
 
-// Its own class, not is-active: render() owns that one for the start and end,
-// and a hover leaving would otherwise strip a selected label's emphasis.
-function setLabelActive(id, active) {
-  labelEls.get(id)?.classList.toggle("is-hovered", active);
 // SVG has no z-index, so the hovered building moves into the last layer to
 // paint over every other icon and name, its label after it so the name stays
 // readable on top of the enlarged icon.
