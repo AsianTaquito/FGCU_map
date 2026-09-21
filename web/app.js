@@ -2,8 +2,8 @@ import { buildGraph, findRoute, minutesFor } from "../FGCU_Map/graph.js";
 
 const SVG_NS = "http://www.w3.org/2000/svg";
 const ICON_SIZE = 22;
-// Hover baseline: clear of the disc the icon grows into (r 27) plus a line of text.
-const LABEL_TUCK = 42;
+// Hover baseline: clear of the disc the icon grows into (r 34) plus a line of text.
+const LABEL_TUCK = 49;
 const BEARINGS = {
   North: 0, Northeast: 45, East: 90, Southeast: 135,
   South: 180, Southwest: 225, West: 270, Northwest: 315,
@@ -24,7 +24,7 @@ const el = {
   hint: document.getElementById("hint"),
 };
 
-const state = { start: null, end: null, mode: "shortest", route: null };
+const state = { start: null, end: null, mode: "shortest", route: null, hover: null };
 const nodeEls = new Map();
 const labelEls = new Map();
 let campus;
@@ -191,36 +191,44 @@ function drawLabels() {
     text.setAttribute("class", "label");
     text.setAttribute("x", spot.x);
     text.setAttribute("y", spot.y);
-    // The shift from that resting spot back under its own building, for hover.
-    text.dataset.tuck = `${building.x - spot.x} ${building.y + LABEL_TUCK - spot.y}`;
+    // The shift from that resting spot back under its own building; CSS applies
+    // it whenever the icon grows, on hover or on selection.
+    text.style.setProperty(
+      "--tuck",
+      `translate(${building.x - spot.x}px, ${building.y + LABEL_TUCK - spot.y}px)`
+    );
     text.textContent = building.label;
     el.labels.append(text);
     labelEls.set(building.id, text);
   }
 }
 
-// SVG has no z-index, so the hovered building moves into the last layer to
-// paint over every other icon and name, its label after it so the name stays
-// readable on top of the enlarged icon.
-//
 // is-hovered is its own class, not is-active: render() owns that one for the
 // start and end, and leaving would otherwise strip a selected label's emphasis.
 function hoverNode(id, active) {
   const node = nodeEls.get(id);
-  const label = labelEls.get(id);
-  if (!node || !label) return;
+  if (!node) return;
 
   // Moving an element re-runs hit testing, which can fire a leave for the node
   // still under the pointer. Ignoring that keeps it from ping-ponging layers.
   if (!active && node.matches(":hover")) return;
-  if (active === (node.parentNode === el.hover)) return;
+  if (active === (state.hover === id)) return;
 
-  label.classList.toggle("is-hovered", active);
-  // Collision avoidance may have parked the name off to a side; hovering pulls
-  // it back under its own icon, where the enlarged drawing can't cover it.
-  if (active) label.setAttribute("transform", `translate(${label.dataset.tuck})`);
-  else label.removeAttribute("transform");
-  if (active) el.hover.append(node, label);
+  state.hover = active ? id : null;
+  labelEls.get(id).classList.toggle("is-hovered", active);
+  layerNode(id);
+}
+
+// SVG has no z-index, so a building that grows — hovered or selected — moves
+// into the last layer to paint over every other icon and name, its label after
+// it so the name stays readable on top of the enlarged icon.
+function layerNode(id) {
+  const node = nodeEls.get(id);
+  const label = labelEls.get(id);
+  const lift = id === state.hover || id === state.start || id === state.end;
+  if (lift === (node.parentNode === el.hover)) return;
+
+  if (lift) el.hover.append(node, label);
   else {
     el.nodes.append(node);
     el.labels.append(label);
@@ -319,6 +327,7 @@ function render() {
       "is-active",
       id === state.start || id === state.end
     );
+    layerNode(id);
   }
 
   drawRoute();

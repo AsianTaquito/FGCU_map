@@ -383,10 +383,11 @@ input:focus-visible + span {
 /* ---------- building icons ---------- */
 
 .node.has-icon circle { r: 13; }
-.node.has-icon:hover circle { r: 27; }
-/* Only hover grows the disc: selection shows in the icon and the label. */
+/* Selection reads the same as hover, a notch smaller so hovering still shows.
+   Same specificity, so hover goes last to win on an already-selected node. */
 .node.has-icon.is-start circle,
-.node.has-icon.is-end circle { r: 13; }
+.node.has-icon.is-end circle { r: 31; }
+.node.has-icon:hover circle { r: 34; }
 
 /* The icon carries its own palette, so state reads as colour vs greyscale
    rather than a fill swap: an inline fill on each path outranks any we set. */
@@ -403,9 +404,9 @@ input:focus-visible + span {
 .node.is-end .icon { filter: none; }
 
 /* Selected stays expanded, so the route's ends keep reading at a glance. */
-.node:hover .icon,
 .node.is-start .icon,
-.node.is-end .icon { transform: scale(2.4); }
+.node.is-end .icon { transform: scale(2.8); }
+.node:hover .icon { transform: scale(3.1); }
 
 @media (prefers-reduced-motion: reduce) {
   .icon { transition: none; }
@@ -424,10 +425,15 @@ input:focus-visible + span {
   transition: font-size 0.14s ease, fill 0.14s ease, transform 0.14s ease;
 }
 
-/* Selected keeps a quiet emphasis; only hover grows it, same as the disc. */
-.label.is-active { font-weight: 700; font-size: 12px; fill: var(--ink); }
+/* Selected reads like hover a notch down, same as the disc and the icon. */
+.label.is-active { font-weight: 700; font-size: 17px; fill: var(--ink); }
 
 .label.is-hovered { font-weight: 700; font-size: 19px; fill: var(--ink); }
+
+/* Clear of the grown icon, which would otherwise cover the name it belongs to.
+   --tuck is the shift from the resting spot, measured per label in app.js. */
+.label.is-active,
+.label.is-hovered { transform: var(--tuck); }
 
 @media (prefers-reduced-motion: reduce) {
   .label { transition: none; }
