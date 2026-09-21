@@ -508,4 +508,13 @@ input:focus-visible + span {
   .map { order: -1; }
 
   .app.is-collapsed { grid-template-rows: 1fr; }
+
+  /* The panel stacks below the map here, so the button drops to that edge and
+     the chevron points down at it. Rotating the button, not the icon, lets the
+     collapsed 180deg on the icon compose with this and point back up. */
+  .panel-toggle {
+    top: auto;
+    bottom: 16px;
+    rotate: -90deg;
+  }
 }
